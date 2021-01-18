@@ -1,0 +1,17 @@
+{
+  "name": "maker_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "blog:dev": "vuepress dev blog",
+    "blog:build": "vuepress build blog",
+    "deploy": "sh deploy.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^1.8.0",
+    "vuepress-theme-maker": "^0.2.1"
+  }
+}
