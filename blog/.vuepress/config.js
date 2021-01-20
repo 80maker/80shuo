@@ -102,5 +102,12 @@ module.exports = {
         }
       }]
     ]
-  }
+  },
+  plugins: [
+    ['vuepress-plugin-container', {
+      type: 'vue',
+      before: '<pre class="language-js"><code>',
+      after: '</code></pre>'
+    }],
+  ]
 }
