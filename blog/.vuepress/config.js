@@ -3,6 +3,10 @@ module.exports = {
   description: '一个出生于80年代的程序员 -- 喜爱创[客]、美[食]、动[画]、怀[旧]的新手艺人',
   port: 8080,
   theme: 'vuepress-theme-maker',
+  markdown: {
+    lineNumbers: true,
+    extractHeaders: [ 'h2', 'h3', 'h4' ]
+  },
   themeConfig: {
     logo: '/logo.jpg',
     subNav: [],
@@ -16,6 +20,8 @@ module.exports = {
     ],
     searchPlaceholder: 'Search',
     searchMaxSuggestions: 10,
+    // wordPerminute: {cn: 300, en: 160},
+    // dateFormat: 'MMM DD, YYYY',
     social: [
       {
         type: 'email',
@@ -34,61 +40,61 @@ module.exports = {
         link: '/rss.xml'
       }
     ],
-    copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>'
-  },
-  plugins: [
-    ['@vuepress/search', {
-      searchMaxSuggestions: 10
-    }],
-    ['@vuepress/blog', {
-      globalPagination: {
-        prevText: '',
-        nextText: ''
-      },
-      directories: [
-        {
-          id: 'post',
-          dirname: '_post',
-          path: '/post/',
-          itemPermalink: '/post/:year/:month/:day/:slug.html',
-          pagination: {
-            perPagePosts: 10,
-          },
-        }
-      ],
-      frontmatters: [
-        {
-          id: "tag",
-          keys: ['tag', 'tags'],
-          path: '/tags/',
-          frontmatter: { title: 'Tag' },
-          pagination: {
-            lengthPerPage: 10
-          }
+    copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>',
+    plugins: [
+      ['@vuepress/search', {
+        searchMaxSuggestions: 10
+      }],
+      ['@vuepress/blog', {
+        globalPagination: {
+          prevText: '',
+          nextText: ''
         },
-        {
-          id: "category",
-          keys: ['category', 'categories'],
-          path: '/categories/',
-          frontmatter: { title: 'Category' },
-          pagination: {
-            lengthPerPage: 10
+        directories: [
+          {
+            id: 'post',
+            dirname: '_post',
+            path: '/post/',
+            itemPermalink: '/post/:year/:month/:day/:slug.html',
+            pagination: {
+              perPagePosts: 10,
+            },
           }
+        ],
+        frontmatters: [
+          {
+            id: "tag",
+            keys: ['tag', 'tags'],
+            path: '/tags/',
+            frontmatter: { title: 'Tag' },
+            pagination: {
+              lengthPerPage: 10
+            }
+          },
+          {
+            id: "category",
+            keys: ['category', 'categories'],
+            path: '/categories/',
+            frontmatter: { title: 'Category' },
+            pagination: {
+              lengthPerPage: 10
+            }
+          }
+        ],
+        sitemap: {
+          hostname: 'https://80shuo.com'
+        },
+        feed: {
+          canonical_base: 'http://80shuo.com',
+        },
+        comment: {
+          service: 'vssue',
+          owner: '80maker',
+          repo: '80shuo',
+          clientId: 'Iv1.57b5c522319529f6',
+          clientSecret: '38e7180524fd3102c9eeefbd8f1c25a06f62b956',
         }
-      ],
-      sitemap: {
-        hostname: 'https://80shuo.com'
-      },
-      feed: {
-        canonical_base: 'http://80shuo.com',
-      },
-      comment: {
-        service: 'vssue',
-        owner: '80maker',
-        repo: '80shuo',
-        clientId: 'Iv1.57b5c522319529f6',
-        clientSecret: '38e7180524fd3102c9eeefbd8f1c25a06f62b956',
-      }
-    }]
-  ]
+      }]
+    ]
+  }
 }
