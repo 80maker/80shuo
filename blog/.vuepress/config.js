@@ -85,9 +85,9 @@ module.exports = {
       comment: {
         service: 'vssue',
         owner: '80maker',
-        repo: '80maker.github.io',
+        repo: '80shuo',
         clientId: 'Iv1.57b5c522319529f6',
-        clientSecret: '7ad0e3d1455a2d6425c813b37a0526e9bd820657',
+        clientSecret: '38e7180524fd3102c9eeefbd8f1c25a06f62b956',
       }
     }]
   ]
