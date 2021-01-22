@@ -2,7 +2,7 @@
 date: 2020-12-26
 title: 从零开始制作VuePress主题
 category: theme
-cover: /images/screenshot.webp
+cover: https://images.unsplash.com/photo-1571157806504-643bfe75765f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1280&q=80
 tags:
   - VuePress
 ---

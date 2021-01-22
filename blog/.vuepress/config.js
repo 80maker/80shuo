@@ -19,7 +19,7 @@ module.exports = {
     nav: [
       { text: '🏠 Home', link: '/' },
       { text: '📖 Theme', link: '/categories/theme/' },
-      { text: '🐉 Maker', link: '/categories/maker/' },
+      { text: '🐉 Maker', link: '/_post/maker.md' },
       { text: '🔥 Animation', link: '/categories/animation/' },
       { text: '📽 Old Time', link: '/categories/oldtime/' },
       { text: '🔗 friend-links', link: '/friend-links/' },
@@ -47,6 +47,19 @@ module.exports = {
       }
     ],
     copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>',
+    reward: {
+      text: 'Buy me a cup of coffee ☕.',
+      ways: [
+        {
+          name: '',
+          icon: '',
+          qrcode: '',
+          url: '',
+          text: '',
+          color: ''
+        }
+      ]
+    },
     plugins: [
       ['@vuepress/search', {
         searchMaxSuggestions: 10
@@ -104,10 +117,6 @@ module.exports = {
     ]
   },
   plugins: [
-    ['vuepress-plugin-container', {
-      type: 'vue',
-      before: '<pre class="language-js"><code>',
-      after: '</code></pre>'
-    }],
+    require('./plugin')
   ]
 }
