@@ -1,9 +1,9 @@
 ---
 date: 2021-01-12
 title: Maker Theme Markdown 语法示例
-category: maker 
 tags:
   - VuePress
+  - maker
 ---
 ## Heading (h2)
 

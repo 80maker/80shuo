@@ -2,10 +2,11 @@
 title: Maker主题配置--Icon图标
 date: 2021-01-22
 category: maker
+pageClass: page-maker-icon
 ---
 
 <style>
-.article-content table {
+.page-maker-icon .article-content table {
   display: table;
   width: 100%;
 }

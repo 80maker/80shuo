@@ -2,6 +2,7 @@
 date: 2021-01-22
 title: "【常用Shell命令】- tree"
 category: shell
+pageClass: page-shell-tree
 ---
 
 ## tree 命令生成目录树
@@ -29,7 +30,7 @@ assets
 常用参数:
 
 <style>
-.article-content table {
+.page-shell-tree .article-content table {
   display: table;
   width: 100%;
 }

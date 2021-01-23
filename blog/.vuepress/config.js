@@ -15,7 +15,7 @@ module.exports = {
   },
   themeConfig: {
     logo: '/logo.jpg',
-    subNav: [],
+    hostname: 'https://80shuo.com',
     nav: [
       { text: '🏠 Home', link: '/' },
       { text: '📖 Theme', link: '/categories/theme/' },
