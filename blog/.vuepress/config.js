@@ -49,14 +49,21 @@ module.exports = {
     copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>',
     reward: {
       text: 'Buy me a cup of coffee ☕.',
+      enable: true,
       ways: [
         {
-          name: '',
-          icon: '',
-          qrcode: '',
-          url: '',
-          text: '',
-          color: ''
+          name: 'wechat',
+          icon: 'wechat',
+          qrcode: '/images/wechat.png',
+          text: 'This is a Wechat Pay qrcode',
+          color: 'rgb(9, 187, 7)'
+        },
+        {
+          name: 'alipay',
+          symbol: 'alipay',
+          qrcode: '/images/alipay.png',
+          text: 'This is a Alipay Pay qrcode',
+          color: '#1296db'
         }
       ]
     },

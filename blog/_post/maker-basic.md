@@ -58,8 +58,9 @@ module.exports = {
 
 设置 sidebar 底部社交媒体 URL。
 
-- type 对应Icon名称
+- type 对应[Icon](./maker-icon.md)名称
 - type github会自动补全链接, 无须填写全路径
+- type email自动生成mailto链接
 
 ``` js
 // .vuepress/config.js
