@@ -117,8 +117,8 @@ module.exports = {
           service: 'vssue',
           owner: '80maker',
           repo: '80shuo',
-          clientId: 'Iv1.57b5c522319529f6',
-          clientSecret: '38e7180524fd3102c9eeefbd8f1c25a06f62b956',
+          clientId: '03ea86acc19571417df6',
+          clientSecret: '0e7a609645761e48e620a3db3e8aefe61b81d53a',
         }
       }]
     ]
