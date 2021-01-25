@@ -66,64 +66,59 @@ module.exports = {
           color: '#1296db'
         }
       ]
-    },
-    plugins: [
-      ['@vuepress/search', {
-        searchMaxSuggestions: 10
-      }],
-      ['@vuepress/blog', {
-        globalPagination: {
-          prevText: '',
-          nextText: ''
-        },
-        directories: [
-          {
-            id: 'post',
-            dirname: '_post',
-            path: '/post/',
-            itemPermalink: '/post/:year/:month/:day/:slug.html',
-            pagination: {
-              perPagePosts: 10,
-            },
-          }
-        ],
-        frontmatters: [
-          {
-            id: "tag",
-            keys: ['tag', 'tags'],
-            path: '/tags/',
-            frontmatter: { title: 'Tag' },
-            pagination: {
-              lengthPerPage: 10
-            }
-          },
-          {
-            id: "category",
-            keys: ['category', 'categories'],
-            path: '/categories/',
-            frontmatter: { title: 'Category' },
-            pagination: {
-              lengthPerPage: 10
-            }
-          }
-        ],
-        sitemap: {
-          hostname: 'https://80shuo.com'
-        },
-        feed: {
-          canonical_base: 'http://80shuo.com',
-        },
-        comment: {
-          service: 'vssue',
-          owner: '80maker',
-          repo: '80shuo',
-          clientId: '03ea86acc19571417df6',
-          clientSecret: '0e7a609645761e48e620a3db3e8aefe61b81d53a',
-        }
-      }]
-    ]
+    }
   },
   plugins: [
+    ['@vuepress/blog', {
+      globalPagination: {
+        prevText: '',
+        nextText: ''
+      },
+      directories: [
+        {
+          id: 'post',
+          dirname: '_post',
+          path: '/post/',
+          itemPermalink: '/post/:year/:month/:day/:slug.html',
+          pagination: {
+            perPagePosts: 10,
+          },
+        }
+      ],
+      frontmatters: [
+        {
+          id: "tag",
+          keys: ['tag', 'tags'],
+          path: '/tags/',
+          frontmatter: { title: 'Tag' },
+          pagination: {
+            lengthPerPage: 10
+          }
+        },
+        {
+          id: "category",
+          keys: ['category', 'categories'],
+          path: '/categories/',
+          frontmatter: { title: 'Category' },
+          pagination: {
+            lengthPerPage: 10
+          }
+        }
+      ],
+      sitemap: {
+        hostname: 'https://80shuo.com'
+      },
+      feed: {
+        canonical_base: 'http://80shuo.com',
+      },
+      comment: {
+        service: 'vssue',
+        owner: '80maker',
+        repo: '80shuo',
+        clientId: '03ea86acc19571417df6',
+        clientSecret: '0e7a609645761e48e620a3db3e8aefe61b81d53a',
+      }
+    }],
     require('./plugin')
   ]
 }
