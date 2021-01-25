@@ -205,7 +205,23 @@ try {
 
 你可以在[这个列表](https://github.com/markdown-it/markdown-it-emoji/blob/master/lib/data/full.json)找到所有可用的 Emoji。
 
-## 自定义容器 <Badge text="默认主题"/>
+## Badge <Badge text="beta" type="warning"/> <Badge text="内置组件"/>
+
+- **Props**:
+
+  - `text` - string
+  - `type` - string, 可选值： `"tip"|"warning"|"error"`，默认值是： `"tip"`
+  - `vertical` - string, 可选值： `"top"|"middle"`，默认值是： `"top"`
+
+- **Usage**:
+
+你可以在标题中，使用这个组件来为某些 API 添加一些状态：
+
+``` md
+### Badge <Badge text="beta" type="warning"/> <Badge text="内置组件"/>
+```
+
+## 自定义容器
 
 **输入**
 

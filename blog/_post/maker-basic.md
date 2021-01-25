@@ -87,6 +87,38 @@ module.exports = {
   }
 }
 ```
+## Reward
+
+设置文章底部的打赏功能。
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    reward: {
+      text: 'Buy me a cup of coffee ☕.',
+      // 是否启用
+      enable: true,
+      ways: [
+        {
+          name: 'wechat',
+          icon: 'wechat',
+          qrcode: '/images/wechat.png',
+          text: 'This is a Wechat Pay qrcode',
+          color: 'rgb(9, 187, 7)'
+        },
+        {
+          name: 'alipay',
+          symbol: 'alipay',
+          qrcode: '/images/alipay.png',
+          text: 'This is a Alipay Pay qrcode',
+          color: '#1296db'
+        }
+      ]
+    },
+  }
+}
+```
 
 ## Footer
 

@@ -5,8 +5,6 @@ category: shell
 pageClass: page-shell-tree
 ---
 
-## tree 命令生成目录树
-
 浏览博客文章时经常会看到一些很漂亮的目录结构,就像下面所示
 
 ``` sh
@@ -24,6 +22,8 @@ assets
 <!-- more -->
 
 以前不知道还以为是XX高级编辑器插件, 其实系统自带的tree命令就可以帮助我们搞定这些高大上的目录结构.
+
+## tree 命令生成目录树
 
 语法格式：tree [参数]
 

@@ -22,9 +22,9 @@ module.exports = {
       { text: '🐉 Maker', link: '/_post/maker.md' },
       { text: '🔥 Animation', link: '/categories/animation/' },
       { text: '📽 Old Time', link: '/categories/oldtime/' },
-      { text: '🔗 friend-links', link: '/friend-links/' },
+      { text: '🔗 friend-links', link: '/friend-links/' },  
     ],
-    searchPlaceholder: 'Search',
+    searchPlaceholder: 'Search ⌘+K',
     searchMaxSuggestions: 10,
     // wordPerminute: {cn: 300, en: 160},
     // dateFormat: 'MMM DD, YYYY',

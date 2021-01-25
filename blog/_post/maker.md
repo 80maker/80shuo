@@ -10,7 +10,13 @@ tag: maker
 
 - [基本配置](./maker-basic.md)
 - [Icon图标](./maker-icon.md)
+- [页面配置](./maker-page.md)
+- [blog插件配置](https://vuepress-plugin-blog.ulivz.com/)
 
 ## 相关资源
 
 <RelatedPosts related-type="tag"/>
+
+## Contact
+
+QQ 群: [132723316](https://qm.qq.com/cgi-bin/qm/qr?k=fknyQ434nkzVUWUmJ6rpIPctkS9eyQaZ&jump_from=webapi)
