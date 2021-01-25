@@ -60,6 +60,11 @@ pageClass: page-maker-icon
 | <Icon icon="tux"/>      |   `<Icon icon="tux"/> `   | <Icon icon="finder"/>    |  `<Icon icon="finder"/>`   |
 | <Icon icon="terminal"/> | `<Icon icon="terminal"/>` | <Icon icon="wordpress"/> | `<Icon icon="wordpress"/>` |
 | <Icon icon="git"/>      |   `<Icon icon="git"/>`    | <Icon icon="loading" style="font-size: 1.2rem;"/>   |  `<Icon icon="loading"/>`  |
+| <Icon icon="zhihu" style="font-size: 1.4rem"/>      |   `<Icon icon="zhihu"/> `   | <Icon icon="douban" style="font-size: 1.4rem"/>    |  `<Icon icon="douban"/>`   |
+| <Icon icon="reddit" style="font-size: 1.4rem"/>      |   `<Icon icon="reddit"/> `   | <Icon icon="medium" style="font-size: 1.4rem"/>    |  `<Icon icon="medium"/>`   |
+| <Icon icon="gitlab" style="font-size: 1.4rem"/>      |   `<Icon icon="gitlab"/> `   | <Icon icon="bitbucket" style="font-size: 1.4rem"/>    |  `<Icon icon="bitbucket"/>`   |
+| <Icon icon="docker" style="font-size: 1.4rem"/>      |   `<Icon icon="docker"/> `   | <Icon icon="csdn" style="font-size: 1.4rem"/>    |  `<Icon icon="csdn"/>`   |
+| <Icon icon="juejin" style="font-size: 1.4rem"/>      |   `<Icon icon="juejin"/> `   |    |   |
 
 ## See also
 
