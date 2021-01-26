@@ -570,3 +570,23 @@ It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
 
 *[HTML]: Hyper Text Markup Language
 
+---
+## Demo 代码
+
+```
+::: demo
+
+<HelloWorld slot="preview"/>
+
+<<< @/blog/.vuepress/components/HelloWorld.vue
+
+:::
+```
+
+::: demo
+
+<HelloWorld slot="preview"/>
+
+<<< @/blog/.vuepress/components/HelloWorld.vue
+
+:::

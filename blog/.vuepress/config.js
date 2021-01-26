@@ -66,14 +66,8 @@ module.exports = {
           color: '#1296db'
         }
       ]
-    }
-  },
-  plugins: [
-    ['@vuepress/blog', {
-      globalPagination: {
-        prevText: '',
-        nextText: ''
-      },
+    },
+    plugins: ['@vuepress/blog', {
       directories: [
         {
           id: 'post',
@@ -118,7 +112,9 @@ module.exports = {
         clientId: '03ea86acc19571417df6',
         clientSecret: '0e7a609645761e48e620a3db3e8aefe61b81d53a',
       }
-    }],
+    }]
+  },
+  plugins: [
     require('./plugin')
   ]
 }
