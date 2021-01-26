@@ -133,6 +133,64 @@ module.exports = {
 }
 ```
 
+## Blog
+
+对应@vuepress/blog插件的options
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    blog: {
+      directories: [
+        {
+          id: 'post',
+          dirname: '_post',
+          path: '/post/',
+          itemPermalink: '/post/:year/:month/:day/:slug.html',
+          pagination: {
+            perPagePosts: 10,
+          },
+        }
+      ],
+      frontmatters: [
+        {
+          id: "tag",
+          keys: ['tag', 'tags'],
+          path: '/tags/',
+          frontmatter: { title: 'Tag' },
+          pagination: {
+            lengthPerPage: 10
+          }
+        },
+        {
+          id: "category",
+          keys: ['category', 'categories'],
+          path: '/categories/',
+          frontmatter: { title: 'Category' },
+          pagination: {
+            lengthPerPage: 10
+          }
+        }
+      ],
+      sitemap: {
+        hostname: 'hostname'
+      },
+      feed: {
+        canonical_base: 'canonical_base',
+      },
+      comment: {
+        service: 'vssue',
+        owner: 'owner',
+        repo: 'repo',
+        clientId: 'your clientId',
+        clientSecret: 'your clientSecret',
+      }
+    }
+  }
+}
+```
+
 
 ## See also
 
