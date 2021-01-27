@@ -3,6 +3,9 @@ module.exports = {
   description: '一个出生于80年代的程序员 -- 喜爱创[客]、美[食]、动[画]、怀[旧]的新手艺人',
   port: 8080,
   theme: 'vuepress-theme-maker',
+  head: [
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' }]
+  ],
   markdown: {
     lineNumbers: true,
     extractHeaders: [ 'h2', 'h3', 'h4' ],
@@ -112,6 +115,19 @@ module.exports = {
         clientId: '03ea86acc19571417df6',
         clientSecret: '0e7a609645761e48e620a3db3e8aefe61b81d53a',
       }
+    },
+    seo: {
+      siteTitle: (_, $site) => $site.title,
+      title: $page => $page.title,
+      description: $page => $page.frontmatter.description,
+      author: (_, $site) => $site.themeConfig.author,
+      tags: $page => $page.frontmatter.tags,
+      twitterCard: _ => 'summary_large_image',
+      type: $page => ['articles', '_post', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+      url: (_, $site, path) => ($site.themeConfig.hostname || '') + path,
+      image: ($page, $site) => $page.frontmatter.cover && (($site.themeConfig.hostname && !$page.frontmatter.cover.startsWith('http') || '') + $page.frontmatter.cover),
+      publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+      modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated)
     }
   },
   plugins: [

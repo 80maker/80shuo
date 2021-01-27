@@ -1,6 +1,8 @@
 ---
 title: Maker主题配置--基本配置
 date: 2021-01-23
+description: 涵盖基乎所有和主题相关配置项,帮助你快速开始搭建和配置Maker主题.
+author: Neil.Chen
 category: maker
 ---
 ## Header
@@ -135,7 +137,7 @@ module.exports = {
 
 ## Blog
 
-对应@vuepress/blog插件的options
+对应 `@vuepress/blog` 插件的options
 
 ``` js
 // .vuepress/config.js
@@ -190,6 +192,32 @@ module.exports = {
   }
 }
 ```
+
+## Seo
+
+对应 `vuepress-plugin-seo` 插件的options
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    // 默认配置
+    seo: {
+      siteTitle: (_, $site) => $site.title,
+      title: $page => $page.title,
+      description: $page => $page.frontmatter.description,
+      author: (_, $site) => $site.themeConfig.author,
+      tags: $page => $page.frontmatter.tags,
+      twitterCard: _ => 'summary_large_image',
+      type: $page => ['articles', '_post', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+      url: (_, $site, path) => ($site.themeConfig.hostname || '') + path,
+      image: ($page, $site) => $page.frontmatter.cover && (($site.themeConfig.hostname && !$page.frontmatter.cover.startsWith('http') || '') + $page.frontmatter.cover),
+      publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
+      modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated),
+    }
+}
+```
+
 
 
 ## See also

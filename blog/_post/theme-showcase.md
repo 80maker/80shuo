@@ -1,6 +1,8 @@
 ---
 date: 2021-01-12
 title: Maker Theme Markdown 语法示例
+description: 涵盖基乎所有和主题相关的Markdown语法示例,帮助写作过程中快速查阅.
+author: Neil.Chen
 tags:
   - VuePress
   - maker
