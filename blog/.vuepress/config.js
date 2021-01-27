@@ -42,14 +42,14 @@ module.exports = {
       },
       {
         type: 'qq',
-        link: '//qm.qq.com/cgi-bin/qm/qr?k=fknyQ434nkzVUWUmJ6rpIPctkS9eyQaZ&jump_from=webapi'
+        link: '//qm.qq.com/cgi-bin/qm/qr?k=5qf0UGmRJWavJGOgo5nemY2BezuGKa-V&jump_from=webapi'
       },
       {
         type: 'feed',
         link: '/rss.xml'
       }
     ],
-    copyright: '© 2020 ❤️ <a target="_blank" href="https://17ria.com/">Neil Chen</a>',
+    copyright: '© 2020 ❤️ <a target="_blank" rel="external nofollow noopener" href="https://17ria.com/">Neil Chen</a>',
     reward: {
       text: 'Buy me a cup of coffee ☕.',
       enable: true,

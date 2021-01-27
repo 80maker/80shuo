@@ -5,6 +5,10 @@ description: 涵盖基乎所有和主题相关配置项,帮助你快速开始搭
 author: Neil.Chen
 category: maker
 ---
+
+> 涵盖基乎所有和主题相关配置项,帮助你快速开始搭建和配置Maker主题.
+
+<!-- more -->
 ## Header
 
 ``` js
