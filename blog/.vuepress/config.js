@@ -1,9 +1,18 @@
 module.exports = {
   title: '1980\'s Maker',
-  description: '一个出生于80年代的程序员 -- 喜爱创[客]、美[食]、动[画]、怀[旧]的新手艺人',
+  description: '一个出生于80年代的程序员 -- 喜爱创[客]、美[食]、动[画]、怀[旧]的新手艺人的博客',
   port: 8080,
   theme: 'vuepress-theme-maker',
   head: [
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' }]
   ],
   markdown: {
@@ -14,6 +23,11 @@ module.exports = {
       'markdown-it-footnote': true,
       'markdown-it-abbr': true,
       'markdown-it-task-lists': true
+    }
+  },
+  locales: {
+    '/': {
+      lang: 'zh-CN',
     }
   },
   themeConfig: {
@@ -128,6 +142,16 @@ module.exports = {
       image: ($page, $site) => $page.frontmatter.cover && (($site.themeConfig.hostname && !$page.frontmatter.cover.startsWith('http') || '') + $page.frontmatter.cover),
       publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),
       modifiedAt: $page => $page.lastUpdated && new Date($page.lastUpdated)
+    },
+    pwa: {
+      serviceWorker: true,
+      popupComponent: 'ThemeSWUpdatePopup',
+      updatePopup: {
+        '/': {
+          message: "发现新内容可用",
+          buttonText: "刷新"
+        }
+      }
     }
   },
   plugins: [
