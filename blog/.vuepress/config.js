@@ -25,11 +25,6 @@ module.exports = {
       'markdown-it-task-lists': true
     }
   },
-  locales: {
-    '/': {
-      lang: 'zh-CN',
-    }
-  },
   themeConfig: {
     logo: '/logo.jpg',
     hostname: 'https://80shuo.com',
@@ -146,12 +141,7 @@ module.exports = {
     pwa: {
       serviceWorker: true,
       popupComponent: 'ThemeSWUpdatePopup',
-      updatePopup: {
-        '/': {
-          message: "发现新内容可用",
-          buttonText: "刷新"
-        }
-      }
+      updatePopup: true
     }
   },
   plugins: [
