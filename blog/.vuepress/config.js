@@ -30,7 +30,7 @@ module.exports = {
     hostname: 'https://80shuo.com',
     nav: [
       { text: '🏠 Home', link: '/' },
-      { text: '📖 Theme', link: '/categories/theme/' },
+      { text: '📖 Theme', link: '/vuepress-theme/' },
       { text: '🐉 Maker', link: '/_post/maker.md' },
       { text: '🔥 Animation', link: '/categories/animation/' },
       { text: '📽 Old Time', link: '/categories/oldtime/' },
@@ -89,6 +89,18 @@ module.exports = {
           pagination: {
             perPagePosts: 10,
           },
+        },
+        {
+          id: 'themePost',
+          dirname: '_theme',
+          path: '/vuepress-theme/',
+          itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
+          layout: 'GalleryLayout',
+          pagination: {
+            perPagePosts: 1,
+            prevText: '',
+            nextText: ''
+          },
         }
       ],
       frontmatters: [
@@ -107,7 +119,9 @@ module.exports = {
           path: '/categories/',
           frontmatter: { title: 'Category' },
           pagination: {
-            lengthPerPage: 10
+            lengthPerPage: 1,
+            prevText: '',
+            nextText: ''
           }
         }
       ],
