@@ -1,6 +1,7 @@
 ---
 date: 2021-01-31
-title: vuepress-theme-potato
+title: vuepress-theme-maker
 theme-tag:
   - light
+category: dark
 ---

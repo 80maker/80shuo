@@ -89,18 +89,6 @@ module.exports = {
           pagination: {
             perPagePosts: 10,
           },
-        },
-        {
-          id: 'themePost',
-          dirname: '_theme',
-          path: '/vuepress-theme/',
-          itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
-          layout: 'GalleryLayout',
-          pagination: {
-            perPagePosts: 1,
-            prevText: '',
-            nextText: ''
-          },
         }
       ],
       frontmatters: [
@@ -159,6 +147,21 @@ module.exports = {
     }
   },
   plugins: [
-    require('./plugin')
+    require('./plugin/util'),
+    [require('./plugin/gallery'), {
+      directories: [
+        {
+          id: 'theme',
+          dirname: '_theme',
+          path: '/vuepress-theme/',
+          itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
+          layout: 'Layout',
+          itemLayout: 'Theme',
+          pagination: {
+            perPagePosts: 10,
+          },
+        }
+      ]
+    }]
   ]
 }
