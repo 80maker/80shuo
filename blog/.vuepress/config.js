@@ -155,8 +155,8 @@ module.exports = {
           dirname: '_theme',
           path: '/vuepress-theme/',
           itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
-          layout: 'Layout',
-          itemLayout: 'Theme',
+          layout: 'GalleryLayout',
+          itemLayout: 'GalleryLayout',
           pagination: {
             perPagePosts: 10,
           },
