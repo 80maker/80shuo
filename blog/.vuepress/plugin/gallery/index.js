@@ -14,7 +14,7 @@ module.exports = (options = {}, context) => ({
         $page.frontmatter.from = $page.frontmatter.from || 'Community';
         const email = $page.frontmatter.email;
         if (email) {
-          $page.avatar = `https://www.gravatar.com/avatar/${md5(email).digest('hex')}?s=100`;
+          $page.frontmatter.avatar = `https://www.gravatar.com/avatar/${md5(email).digest('hex')}?s=100`;
         }
         $page.pid = item.id;
         return $page.pageType = `${item.id}Item`;

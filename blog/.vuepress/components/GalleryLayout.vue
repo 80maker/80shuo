@@ -27,31 +27,21 @@
               <div class="gallery__pic-container">
                 <div class="gallery__pic" :style="{backgroundImage: `url(${item.frontmatter.cover})`}">
                 </div>
-                <a class="shot-thumbnail-link dribbble-link js-shot-thumbnail-link"
-                  href="/shots/14377374--Exploration-Sport-News-Hero-Section">
-                  <span class="accessibility-text">View #Exploration - Sport News Hero Section</span>
+                <a href="">
+                  <span>{{item.frontmatter.name}}</span>
                 </a>
-                <div class="shot-thumbnail-overlay">
-                  <div class="shot-thumbnail-overlay-content">
-                    <div class="shot-title">#Exploration - Sport News Hero Section</div>
-                  </div>
-                </div>
               </div>
-              <div class="shot-details-container">
+              <div class="gallery__footer">
                 <div class="user-info">
-                  <a class="hoverable url" rel="contact" href="/paperpillar">
+                  <a rel="contact" ref="noopener noreferrer nofollow" target="_blank" :href="`https://www.npmjs.com/~${item.frontmatter.author}`">
                     <img
                       :alt="item.frontmatter.author"
-                      :src="item.avatar"/>
-                    <span class="display-name">{{item.frontmatter.author}}</span></a>
+                      :src="item.frontmatter.avatar"/>
+                    <span class="name">{{item.frontmatter.author}}</span>
+                  </a>
                   <span class="badge">Community</span>
                 </div>
-                <div class="shot-statistics-container js-shot-statistics" style="visibility: visible;">
-                  <div class="shot-statistic js-shot-comments-container">
-                    <a class="js-overlay-scroll-to-section" rel="no-follow" data-scroll-to-id="js-add-comment"
-                      href="/shots/14377374--Exploration-Sport-News-Hero-Section">
-                    </a> 
-                  </div>
+                <div class="social-link">
                   <i class="icon-github"/>
                   <Icon icon="npm"/>
                 </div>
@@ -101,17 +91,49 @@ export default {
 .gallery
   &__list
     display: grid;
-    grid-gap: 36px;
-    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-gap: 3.33%;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
     list-style none
+    padding-left: 0;
   &__item
     max-width 360px
   &__pic-container
     position: relative;
-    border-radius: 8px;
   &__pic
+    border-radius: 8px;
     height: 270px;
     background-color  var(--theme-card-background)
     background-size cover
     background-position center center
+  &__footer
+    margin-top: 8px;
+.user-info
+  display: flex;
+  .badge
+    display: flex;
+    align-items center
+    transition: color, background-color 200ms ease;
+    font-size: 10px;
+    margin-left: 8px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ccc;
+    border-radius: 3px;
+    padding 2px 3px
+    cursor: pointer;
+    &:hover
+      color #fff
+      background-color var(--theme-accent-color)
+  a
+    display: flex;
+    align-items center
+    img
+      width: 24px;
+      height: 24px;
+      overflow: hidden;
+      border-radius 50%
+    .name
+      margin-left: 8px;
+      font-size: 14px;
 </style>
