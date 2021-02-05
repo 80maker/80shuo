@@ -56,40 +56,15 @@ const getFormatted = async (name) => {
     return `\n  Package '${name}' not found in NPM.`
   }
   const author = result.author.name;
-  const repo = result.repository.url;
+  const repo = vcsurl(result.repository.url);
   const desc = result.description;
-
-  const str = [
-    (name + ': '),
-    `  latest: ${result.version}`,
-    repo && `  repo: ${vcsurl(repo)}`,
-    author && `  author: ${author}`,
-    desc && `  description: ${desc}`,
-  ].filter(s => s).map(s => `  ${s}`).join('\n')
-  return str;
-};
-
-const formatAll = async (names) => {
-  let str = '\n';
-  if (names.length > 0) {
-    let all = [];
-    for (const name of names) {
-      all.push(await getFormatted(name));
-    }
-    str += all.join('\n');
-  } else {
-    try {
-      const json = require('./package.json');
-      str += `  npm-latest [${json.version}]`;
-    } catch (error) {
-    } finally {
-      str += '\n  Usage: npm-latest [package]';
-    }
+  return {
+    author,
+    repo,
+    desc,
+    latest: result.version
   }
-  str += '\n'
-  return str;
-}
+};
 
 exports.getLatest = getLatest;
 exports.getFormatted = getFormatted;
-exports.formatAll = formatAll;

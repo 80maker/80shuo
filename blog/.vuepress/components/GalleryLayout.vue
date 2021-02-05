@@ -25,25 +25,28 @@
           <ol class="gallery__list">
             <li class="gallery__item" v-for="item in galleryList" :key="item.path">
               <div class="gallery__pic-container">
-                <div class="gallery__pic" :style="{backgroundImage: `url(${item.frontmatter.cover})`}">
+                <div class="gallery__pic" :class="{'gallery__pic--empty': !item.frontmatter.cover}" :style="{backgroundImage: `url(${item.frontmatter.cover || 'none'})`}">
                 </div>
-                <a href="">
+                <a v-if="item.frontmatter.site" class="gallery__overlay" target="_blank" ref="noopener noreferrer nofollow" :href="item.frontmatter.site">
+                  <span>{{item.frontmatter.name}}</span>
+                </a>
+                <a v-else class="gallery__overlay" href="javascript:;">
                   <span>{{item.frontmatter.name}}</span>
                 </a>
               </div>
               <div class="gallery__footer">
                 <div class="user-info">
-                  <a rel="contact" ref="noopener noreferrer nofollow" target="_blank" :href="`https://www.npmjs.com/~${item.frontmatter.author}`">
+                  <a rel="contact" href="javascript:;">
                     <img
                       :alt="item.frontmatter.author"
                       :src="item.frontmatter.avatar"/>
                     <span class="name">{{item.frontmatter.author}}</span>
+                    <span class="badge">{{item.frontmatter.from}}</span>
                   </a>
-                  <span class="badge">Community</span>
                 </div>
                 <div class="social-link">
-                  <i class="icon-github"/>
-                  <Icon icon="npm"/>
+                  <a :href="item.frontmatter.repo" :title="item.frontmatter.repo" ref="noopener noreferrer nofollow" target="_blank"><Icon icon="git"/></a>
+                  <a :href="`https://www.npmjs.com/${item.frontmatter.name}`" :title="`https://www.npmjs.com/${item.frontmatter.name}`" ref="noopener noreferrer nofollow" target="_blank"><Icon icon="npm"/></a>
                 </div>
               </div>
             </li>
@@ -91,24 +94,82 @@ export default {
 .gallery
   &__list
     display: grid;
-    grid-gap: 3.33%;
-    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-gap: 36px;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     list-style none
     padding-left: 0;
-  &__item
-    max-width 360px
   &__pic-container
     position: relative;
+    padding: 8px;
+    background-color  var(--theme-card-background)
+    border-radius: 8px;
   &__pic
     border-radius: 8px;
-    height: 270px;
-    background-color  var(--theme-card-background)
-    background-size cover
+    height: 0;
+    padding-bottom: 75%;
+    background-size contain
     background-position center center
+    background-repeat: no-repeat;
+    &--empty
+      &:after
+        content: ''
+        position: absolute;
+        background-repeat: no-repeat;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-image url('/images/default-picture.svg')
+        background-position center center
+        opacity: .2
+        background-size 30%
   &__footer
+    display: flex;
     margin-top: 8px;
+  &__overlay
+    cursor: pointer;
+    position absolute
+    display: flex;
+    align-items flex-end
+    border-radius 8px
+    padding: 20px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    background: linear-gradient(
+      180deg,
+      transparent 62%,
+      rgba(0, 0, 0, 0.00345888) 63.94%,
+      rgba(0, 0, 0, 0.014204) 65.89%,
+      rgba(0, 0, 0, 0.0326639) 67.83%,
+      rgba(0, 0, 0, 0.0589645) 69.78%,
+      rgba(0, 0, 0, 0.0927099) 71.72%,
+      rgba(0, 0, 0, 0.132754) 73.67%,
+      rgba(0, 0, 0, 0.177076) 75.61%,
+      rgba(0, 0, 0, 0.222924) 77.56%,
+      rgba(0, 0, 0, 0.267246) 79.5%,
+      rgba(0, 0, 0, 0.30729) 81.44%,
+      rgba(0, 0, 0, 0.341035) 83.39%,
+      rgba(0, 0, 0, 0.367336) 85.33%,
+      rgba(0, 0, 0, 0.385796) 87.28%,
+      rgba(0, 0, 0, 0.396541) 89.22%,
+      rgba(0, 0, 0, 0.4) 91.17%);
+    &:hover
+      opacity: 1;
+    > span
+      font-family var(--theme-font-heading)
+      color: #fff;
+      font-size: 18px;
+      line-height: 22px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 .user-info
   display: flex;
+  align-items center
   .badge
     display: flex;
     align-items center
@@ -116,6 +177,7 @@ export default {
     font-size: 10px;
     margin-left: 8px;
     line-height: 1;
+    font-family var(--theme-font-label)
     text-transform: uppercase;
     color: #fff;
     background: #ccc;
@@ -136,4 +198,12 @@ export default {
     .name
       margin-left: 8px;
       font-size: 14px;
+.social-link
+  display: flex;
+  flex auto
+  font-size: 1.2rem;
+  justify-content flex-end
+  align-items center
+  a
+    margin-left: 8px;
 </style>

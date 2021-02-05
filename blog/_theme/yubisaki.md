@@ -1,0 +1,7 @@
+---
+name: vuepress-theme-yubisaki
+email: stickmyc@gmail.com
+cover: https://camo.githubusercontent.com/329cd9a21c31cdbbeb1e963e9d7e397cd523dbe18d4b003534fc448642f8fb89/68747470733a2f2f626c6f672d313235323138313333332e636f732e61702d7368616e676861692e6d7971636c6f75642e636f6d2f626c6f672f6578616d706c652e706e67
+theme-tags:
+  - light
+---
