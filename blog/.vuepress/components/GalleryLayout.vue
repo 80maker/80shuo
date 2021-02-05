@@ -8,7 +8,7 @@
           </div> -->
           <!-- <h2>{{currentKeyword}}</h2> -->
           <h1 class="title">{{$page.frontmatter.description}}</h1>
-          <router-link class="btn-submit" to="/post/2021/02/05/theme-submit"><i class="icon-folder-plus"></i> <span>Submit Your Theme</span></router-link>
+          <router-link class="btn-submit" to="/post/2021/02/06/theme-submit"><i class="icon-folder-plus"></i> <span>Submit Your Theme</span></router-link>
           <!-- <div class="gallery-operate">
             <p><strong>Newest:</strong> <a href="#">Dark</a> <a href="#">Colorful</a> <a href="#">Docs</a></p>
             <a href="javascript:;">Filters <Icon icon="filter"/></a>
