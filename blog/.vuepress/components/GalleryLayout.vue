@@ -3,11 +3,12 @@
     <template slot="main">
       <div class="theme-main__inner gallery">
         <div v-if="$page.pageType === 'theme'"  class="gallery-list-wrap">
-          <div class="gallery-search">
+          <!-- <div class="gallery__search">
             <input v-model="keyword" type="text" placeholder="Search...">
-          </div>
-          <h2>{{currentKeyword}}</h2>
-          <p>A curated list of awesome things related to VuePress Theme</p>
+          </div> -->
+          <!-- <h2>{{currentKeyword}}</h2> -->
+          <h1 class="title">{{$page.frontmatter.description}}</h1>
+          <router-link class="btn-submit" to="/post/2021/02/05/theme-submit"><i class="icon-folder-plus"></i> <span>Submit Your Theme</span></router-link>
           <!-- <div class="gallery-operate">
             <p><strong>Newest:</strong> <a href="#">Dark</a> <a href="#">Colorful</a> <a href="#">Docs</a></p>
             <a href="javascript:;">Filters <Icon icon="filter"/></a>
@@ -27,11 +28,12 @@
               <div class="gallery__pic-container">
                 <div class="gallery__pic" :class="{'gallery__pic--empty': !item.frontmatter.cover}" :style="{backgroundImage: `url(${item.frontmatter.cover || 'none'})`}">
                 </div>
-                <a v-if="item.frontmatter.site" class="gallery__overlay" target="_blank" ref="noopener noreferrer nofollow" :href="item.frontmatter.site">
+                <a class="gallery__overlay" href="javascript:;">
                   <span>{{item.frontmatter.name}}</span>
                 </a>
-                <a v-else class="gallery__overlay" href="javascript:;">
-                  <span>{{item.frontmatter.name}}</span>
+                <p class="gallery__desc">{{item.frontmatter.desc}}</p>
+                <a v-if="item.frontmatter.site" class="gallery__external" target="_blank" ref="noopener noreferrer nofollow" :href="item.frontmatter.site">
+                  <i class="icon-external"/> <span>{{item.frontmatter.site}}</span>
                 </a>
               </div>
               <div class="gallery__footer">
@@ -90,23 +92,86 @@ export default {
 
 <style lang="stylus" scope>
 .theme-main__inner.gallery
-  max-width calc(100% - 4rem)
+  max-width calc(100% - 72px)
+  margin-top: 1rem;
+  .title
+    font-size: 16px;
+    font-weight normal
+    text-align: center;
+    font-family var(--theme-font-base)
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  .btn-submit
+    color #FFF
+    display flex
+    align-items center
+    justify-content center
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background: var(--theme-accent-color);
+    transition: all 200ms ease;
+    border-radius: 8px;
+    appearance: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    height: 32px;
+    width: 180px;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    > i
+      margin-right: 5px;
+      transform translateY(-2px)
+    &:hover
+      opacity: .8;
 .gallery
+  &__search
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, .06);
+    border-radius: 8px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    > input
+      font-size: 16px;
+      padding: 0;
+      height: 100%;
+      padding-left: 60px;
+      padding-right: 24px;
+      background: transparent;
+      border: 1px solid transparent;
+      outline none
   &__list
     display: grid;
+    margin-left: auto;
+    margin-right: auto;
     grid-gap: 36px;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     list-style none
     padding-left: 0;
   &__pic-container
     position: relative;
-    padding: 8px;
     background-color  var(--theme-card-background)
     border-radius: 8px;
+    &:hover .gallery__external span
+        max-width: 150px;
+        margin-left: 4px;
+  &__desc
+    display none
   &__pic
     border-radius: 8px;
     height: 0;
     padding-bottom: 75%;
+    overflow: hidden;
     background-size contain
     background-position center center
     background-repeat: no-repeat;
@@ -126,6 +191,30 @@ export default {
   &__footer
     display: flex;
     margin-top: 8px;
+  &__external
+    position: absolute;
+    right: .85rem;
+    top: .85rem;
+    background: #fff;
+    color: #0d0c22;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-sizing border-box
+    > i
+      font-size: 1rem;
+    > span
+      max-width: 0;
+      overflow: hidden;
+      transition-property max-width;
+      transition-duration .3s
+      text-overflow: ellipsis;
+      white-space: nowrap;
   &__overlay
     cursor: pointer;
     position absolute
@@ -206,4 +295,8 @@ export default {
   align-items center
   a
     margin-left: 8px;
+@media (min-width: 1600px)
+  .gallery
+    &__list
+      grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
 </style>

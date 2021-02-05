@@ -17,6 +17,7 @@ module.exports = (options = {}, context) => ({
         let npmInfo = {};
         try {
           npmInfo = await getFormatted($page.frontmatter.name); // {author, desc, latest, repo}
+          console.log(`loaded theme [${$page.frontmatter.name}]`);
         } catch (error) {
           console.error('fetch npmInfo failed!');
         }
@@ -40,11 +41,11 @@ module.exports = (options = {}, context) => ({
       return {
         path: item.path,
         frontmatter: {
-          date: '2021-02-05',
+          date: '2021-02-06',
           layout: item.layout,
           author: '80maker',
           title: 'VuePress Theme Gallery',
-          description: 'A curated list of awesome things related to VuePress Theme'
+          description: 'A curated list of awesome VuePress Themes!'
         }
       };
     }); 
