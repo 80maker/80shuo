@@ -1,7 +1,7 @@
 const {listFile} = require('vuepress-theme-maker/util/node');
 const { path } = require('@vuepress/shared-utils')
 let themeList = listFile(path.resolve(__dirname, '../_theme/'));
-const THEME_PATH = '/vuepress-theme/'
+const THEME_PATH = '/vuepress-theme'
 themeList = themeList.map(item => {
   return `${THEME_PATH}${item}`;
 })

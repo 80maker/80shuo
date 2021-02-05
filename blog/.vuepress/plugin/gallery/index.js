@@ -10,7 +10,7 @@ module.exports = (options = {}, context) => ({
   async extendPageData($page) {
     for await (const item of options.directories) {
       if ($page.regularPath && $page.regularPath.startsWith(`/${item.dirname}`)) {
-        // $page.frontmatter.permalink = `${item.path}:slug.html`;
+        $page.frontmatter.permalink = `${item.path}:slug.html`;
         if(!$page.frontmatter.name) {
           return;
         }
