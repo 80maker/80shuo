@@ -1,9 +1,9 @@
 const {listFile} = require('vuepress-theme-maker/util/node');
 const { path } = require('@vuepress/shared-utils')
 let themeList = listFile(path.resolve(__dirname, '../_theme/'));
-const THEME_PATH = '/vuepress-theme'
+const THEME_PATH = '/vuepress-theme/'
 themeList = themeList.map(item => {
-  return `${THEME_PATH}${item}`;
+  return `/vuepress-theme${item}`;
 })
 
 module.exports = {
@@ -141,7 +141,12 @@ module.exports = {
       title: $page => $page.title,
       description: $page => $page.frontmatter.description,
       author: (_, $site) => $site.themeConfig.author,
-      tags: $page => $page.frontmatter.tags,
+      tags: $page => {
+        if ('theme-tags' in $page.frontmatter) {
+          return $page.frontmatter['theme-tags']
+        }
+        return $page.frontmatter.tags
+      },
       twitterCard: _ => 'summary_large_image',
       type: $page => ['articles', '_post', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.hostname || '') + path,
@@ -158,19 +163,15 @@ module.exports = {
   plugins: [
     require('./plugin/util'),
     [require('./plugin/gallery'), {
-      directories: [
-        {
-          id: 'theme',
-          dirname: '_theme',
-          path: THEME_PATH,
-          itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
-          layout: 'GalleryLayout',
-          itemLayout: 'GalleryLayout',
-          pagination: {
-            perPagePosts: 10,
-          },
-        }
-      ]
+      id: 'theme',
+      dirname: '_theme',
+      path: THEME_PATH,
+      itemPermalink: '/vuepress-theme/:year/:month/:day/:slug.html',
+      layout: 'GalleryLayout',
+      itemLayout: 'GalleryLayout',
+      pagination: {
+        perPagePosts: 10,
+      },
     }]
   ]
 }

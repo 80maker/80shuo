@@ -40,9 +40,9 @@
                 <div class="user-info">
                   <a rel="contact" href="javascript:;">
                     <img
-                      :alt="item.frontmatter.author"
+                      :alt="item.frontmatter.author.name"
                       :src="item.frontmatter.avatar"/>
-                    <span class="name">{{item.frontmatter.author}}</span>
+                    <span class="name">{{item.frontmatter.author.name}}</span>
                     <span class="badge">{{item.frontmatter.from}}</span>
                   </a>
                 </div>
