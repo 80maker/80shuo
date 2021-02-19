@@ -15,7 +15,7 @@ module.exports = (options = {}, context) => ({
       }
       let npmInfo = {};
       try {
-        const { data } = await axios.get('http://localhost:8360/v1/theme', {
+        const { data } = await axios.get('http://shuo.17ria.com/v1/theme', {
           params: {
             name: $page.frontmatter.name
           }
