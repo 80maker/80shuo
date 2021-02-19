@@ -14,7 +14,7 @@
           <li>License: {{$frontmatter.license}}</li>
           <li>tags: {{$frontmatter['theme-tags'].join(', ')}}</li>
         </ul>
-        <a class="btn-theme mr-2" :href="$frontmatter.repo">Npm</a>
+        <a class="btn-theme mr-2" :href="$frontmatter.repo">Repository</a>
         <a class="btn-theme" :href="$frontmatter.homepage">Homepage</a>
       </div>
       <div class="theme__screen-shot">
