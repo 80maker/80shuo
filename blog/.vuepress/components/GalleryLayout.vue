@@ -28,9 +28,7 @@
               <div class="gallery__pic-container">
                 <div class="gallery__pic" :class="{'gallery__pic--empty': !item.frontmatter.cover}" :style="{backgroundImage: `url(${item.frontmatter.cover || 'none'})`}">
                 </div>
-                <a class="gallery__overlay" href="javascript:;">
-                  <span>{{item.frontmatter.name}}</span>
-                </a>
+                <router-link class="gallery__overlay" :to="item.path"><span>{{item.frontmatter.name}}</span></router-link>
                 <p class="gallery__desc">{{item.frontmatter.desc}}</p>
                 <a v-if="item.frontmatter.site" class="gallery__external" target="_blank" ref="noopener noreferrer nofollow" :href="item.frontmatter.site">
                   <i class="icon-external"/> <span>{{item.frontmatter.site}}</span>

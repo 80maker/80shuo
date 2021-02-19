@@ -1,7 +1,8 @@
 <template>
-  <div class="post-operate">
-    <router-link v-if="$mkPrevPageItem" class="post-operate__prev" :to="$mkPrevPageItem.path">{{$mkPrevPageItem.title}}</router-link>
-    <router-link v-if="$mkNextPageItem" class="post-operate__next" :to="$mkNextPageItem.path">{{$mkNextPageItem.title}}</router-link>
+  <div class="theme-post-operate">
+    <router-link v-if="$mkPrevPageItem" class="post-operate__prev" :to="$mkPrevPageItem.path">{{$mkPrevPageItem.frontmatter.name}}</router-link>
+    <router-link v-if="$mkNextPageItem" class="post-operate__next" :to="$mkNextPageItem.path">{{$mkNextPageItem.frontmatter.name}}</router-link>
+    <router-link class="btn-theme" to="/vuepress-theme">All Themes</router-link>
   </div>
 </template>
 <script>
@@ -12,12 +13,12 @@ export default {
 }
 </script>
 <style lang="stylus">
-.post-operate
+.theme-post-operate
   display: flex;
   padding: 1.5rem 0;
-  border-top: 1px solid;
   border-color: inherit;
   line-height: 1.5;
+  align-items center
   &__next
     text-align right
     &:after
@@ -30,10 +31,15 @@ export default {
     position: relative;
     flex: 1;
     padding: 0 1rem;
+    white-space nowrap
     &:after
       position: absolute;
       top: 0;
       font-size: 1.4rem;
       font-family: Icon;
       line-height: 1;
+  .btn-theme
+    flex-grow: 0;
+    white-space nowrap
+    margin-left: 2rem;
 </style>

@@ -143,12 +143,12 @@ module.exports = {
       author: (_, $site) => $site.themeConfig.author,
       tags: $page => {
         if ('theme-tags' in $page.frontmatter) {
-          return $page.frontmatter['theme-tags']
+          return $page.frontmatter['theme-tags'];
         }
         return $page.frontmatter.tags
       },
       twitterCard: _ => 'summary_large_image',
-      type: $page => ['articles', '_post', 'blog'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
+      type: $page => ['articles', '_post', 'blog', '_theme'].some(folder => $page.regularPath.startsWith('/' + folder)) ? 'article' : 'website',
       url: (_, $site, path) => ($site.themeConfig.hostname || '') + path,
       image: ($page, $site) => $page.frontmatter.cover && (($site.themeConfig.hostname && !$page.frontmatter.cover.startsWith('http') || '') + $page.frontmatter.cover),
       publishedAt: $page => $page.frontmatter.date && new Date($page.frontmatter.date),

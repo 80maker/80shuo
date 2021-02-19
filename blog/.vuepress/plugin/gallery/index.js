@@ -15,7 +15,7 @@ module.exports = (options = {}, context) => ({
       }
       let npmInfo = {};
       try {
-        const { data } = await axios.get('http://shuo.17ria.com/v1/theme', {
+        const { data } = await axios.get('http://localhost:8360/v1/theme', {
           params: {
             name: $page.frontmatter.name
           }
@@ -29,7 +29,7 @@ module.exports = (options = {}, context) => ({
       $page.frontmatter.layout = options.itemLayout;
       $page.frontmatter.from = $page.frontmatter.from || 'Community';
       $page.pid = options.id;
-      const email = $page.frontmatter.email;
+      const email = $page.frontmatter.email || $page.frontmatter.author.email;
       if (email && !$page.frontmatter.avatar) {
         $page.frontmatter.avatar = `https://www.gravatar.com/avatar/${md5(email).digest('hex')}?s=100&default=retro`;
       }
@@ -38,6 +38,7 @@ module.exports = (options = {}, context) => ({
     if ($page.path === options.path) {
       $page.pageType = options.id;
     }
+    $page._content =  $page.frontmatter.readme;
   },
   additionalPages() {
     const pages = [{
