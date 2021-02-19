@@ -1,10 +1,5 @@
-const {listFile} = require('vuepress-theme-maker/util/node');
 const { path } = require('@vuepress/shared-utils')
-let themeList = listFile(path.resolve(__dirname, '../_theme/'));
 const THEME_PATH = '/vuepress-theme/'
-themeList = themeList.map(item => {
-  return `/vuepress-theme${item}`;
-})
 
 module.exports = {
   title: '1980\'s Maker',
@@ -123,7 +118,7 @@ module.exports = {
       ],
       sitemap: {
         hostname: 'https://80shuo.com',
-        exclude: ['/404.html', ...themeList]
+        exclude: ['/404.html']
       },
       feed: {
         canonical_base: 'http://80shuo.com',
