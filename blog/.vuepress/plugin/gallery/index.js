@@ -26,6 +26,7 @@ module.exports = (options = {}, context) => ({
         console.error('fetch npmInfo failed!');
       }
       $page.frontmatter = Object.assign(npmInfo, $page.frontmatter);
+      $page.frontmatter.title = $page.frontmatter.name;
       $page.frontmatter.layout = options.itemLayout;
       $page.frontmatter.from = $page.frontmatter.from || 'Community';
       $page.pid = options.id;
