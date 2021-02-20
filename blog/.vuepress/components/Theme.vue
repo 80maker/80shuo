@@ -10,12 +10,14 @@
         <p class="gallery-post__desc">{{$frontmatter.description}}</p>
         <ul class="gallery-post__meta">
           <li>Author: <a :href="$frontmatter.homepage" target="_blank" rel="external nofollow noopener">{{$frontmatter.author.name}}</a></li>
-          <li>Updated: {{last_update}}</li>
+          <li>Last Update: {{last_update}}</li>
+          <li>Latest Version: {{$frontmatter.latest}}</li>
           <li>License: {{$frontmatter.license}}</li>
           <li>tags: {{$frontmatter['theme-tags'].join(', ')}}</li>
         </ul>
-        <a class="btn-theme mr-2" :href="$frontmatter.repo">Repository</a>
-        <a class="btn-theme" :href="$frontmatter.homepage">Homepage</a>
+        <a class="btn-theme mr-2" target="_blank" rel="external nofollow noopener" :href="$frontmatter.repo">Repository</a>
+        <a class="btn-theme mr-2" target="_blank" rel="external nofollow noopener" :href="$frontmatter.homepage">Homepage</a>
+        <a v-if="$frontmatter.site" class="btn-theme" target="_blank" rel="external nofollow noopener" :href="$frontmatter.site">Preview</a>
       </div>
     </div>
     <ThemeNav class="mt-2"/>

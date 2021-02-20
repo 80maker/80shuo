@@ -72,8 +72,8 @@ export default {
         return item.pid === 'theme';
       });
       list = list.sort((a,b) => {
-        let time1 = new Date(a.frontmatter.date);
-        let time2 = new Date(b.frontmatter.date);
+        let time1 = new Date(a.frontmatter.last_update);
+        let time2 = new Date(b.frontmatter.last_update);
         return time2 - time1;
       });
       return list;
@@ -92,6 +92,7 @@ export default {
 .theme-main__inner.gallery
   max-width calc(100% - 72px)
   margin-top: 1rem;
+  padding-bottom: 3rem;
   .title
     font-size: 16px;
     font-weight normal
