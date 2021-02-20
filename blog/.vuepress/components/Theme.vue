@@ -114,6 +114,8 @@ export default {
   max-width 900px
   margin-left: auto;
   margin-right: auto;
+  pre
+    overflow-x auto
   .deep-link
     display none
 @media (max-width: $MQMobile)
