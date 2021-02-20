@@ -1,14 +1,14 @@
 <template>
-  <div class="theme">
-    <div class="theme__hd d-flex">
-      <strong class="theme__name">VuePress Themes</strong>
-      <ThemeNav/>
+  <div class="gallery-post theme-main__inner">
+    <div class="gallery-post__hd d-flex justify-space-between align-center">
+      <strong class="gallery-post__name">VuePress Themes</strong>
+      <router-link class="btn-theme" to="/vuepress-theme">All Themes</router-link>
     </div>
-    <div class="theme__top d-flex">
-      <div class="theme__info flex-auto">
-        <div class="theme__title">{{$frontmatter.name}}</div>
-        <p class="theme__desc">{{$frontmatter.description}}</p>
-        <ul class="theme__meta">
+    <div class="gallery-post__top">
+      <div class="gallery-post__info">
+        <div class="gallery-post__title">{{$frontmatter.name}}</div>
+        <p class="gallery-post__desc">{{$frontmatter.description}}</p>
+        <ul class="gallery-post__meta">
           <li>Author: <a :href="$frontmatter.homepage" target="_blank" rel="external nofollow noopener">{{$frontmatter.author.name}}</a></li>
           <li>Updated: {{last_update}}</li>
           <li>License: {{$frontmatter.license}}</li>
@@ -17,11 +17,9 @@
         <a class="btn-theme mr-2" :href="$frontmatter.repo">Repository</a>
         <a class="btn-theme" :href="$frontmatter.homepage">Homepage</a>
       </div>
-      <div class="theme__screen-shot">
-        <img v-if="$frontmatter.cover" :src="$frontmatter.cover" :alt="$frontmatter.name">
-      </div>
     </div>
-    <div class="readme" v-html="$frontmatter.readme"></div>
+    <ThemeNav class="mt-2"/>
+    <div class="readme mt-2" v-html="$frontmatter.readme"></div>
   </div>
 </template>
 
@@ -71,17 +69,21 @@ export default {
 </script>
 
 <style lang="stylus">
-.theme
-  &__name
-    font-size: 1.2rem;
+.gallery-post
+  border-radius: 6px;
+  line-height 1.8
+  color var(--theme-foreground-color)
   &__hd
-    align-items center
-    justify-content space-between
+    padding: 0 0 2rem;
+    line-height: 1;
+  &__name
+    display: block;
+    font-size: 1.78571rem;
+    font-family: var(--theme-font-heading);
   &__top
     padding: 2rem;
-    background #FFF
     border-radius 6px
-    margin-bottom: 3rem;
+    background var(--theme-card-background)
   &__title
     font-size: 2rem;
     color var(--theme-accent-color)
@@ -96,9 +98,6 @@ export default {
     padding-left: 0;
     margin-top: 2rem;
     margin-bottom: 3rem;
-  &__screen-shot
-    width 50%;
-    max-width: 50%;
   .btn-theme
     padding: .5rem;
     border-radius 4px
@@ -107,9 +106,20 @@ export default {
     &:hover
       opacity: .85;
 .readme
+  border-radius 6px
+  background var(--theme-card-background)
+  padding: .80625rem 2.15rem 2.15rem;
   max-width 900px
   margin-left: auto;
   margin-right: auto;
   .deep-link
     display none
+@media (max-width: $MQMobile)
+  .gallery-post
+    margin-top: 2rem;
+    &__hd
+      padding-left: 2rem;
+      padding-right: 2rem;
+    &__top
+      flex-direction column
 </style>

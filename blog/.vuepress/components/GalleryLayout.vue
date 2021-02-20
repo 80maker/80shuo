@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <template slot="main">
-      <div class="theme-main__inner gallery">
-        <div v-if="$page.pageType === 'theme'"  class="gallery-list-wrap">
+      <div v-if="$page.pageType === 'theme'" class="theme-main__inner gallery">
+        <div  class="gallery-list-wrap">
           <!-- <div class="gallery__search">
             <input v-model="keyword" type="text" placeholder="Search...">
           </div> -->
@@ -52,8 +52,8 @@
             </li>
           </ol>
         </div>
-        <Theme v-else-if="$page.pageType === 'themeItem'" />
       </div>
+      <Theme v-else-if="$page.pageType === 'themeItem'" />
     </template>
   </Layout>
 </template>
