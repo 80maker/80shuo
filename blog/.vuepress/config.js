@@ -61,7 +61,7 @@ module.exports = {
         link: '/rss.xml'
       }
     ],
-    copyright: '© 2020 ❤️ <a target="_blank" rel="external nofollow noopener" href="https://17ria.com/">Neil Chen</a>',
+    copyright: `© ${new Date().getFullYear()} ❤️ <a target="_blank" rel="external nofollow noopener" href="https://17ria.com/">Neil Chen</a>`,
     reward: {
       text: 'Buy me a cup of coffee ☕.',
       enable: true,
