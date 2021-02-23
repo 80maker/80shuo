@@ -33,6 +33,70 @@ lang: en-US
 在 VuePress 中，Front matter 是 **可选的**。通过Front matter可以做很多有用的事情, 比如文章标签、分类、封面图等
 :::
 
+---
+## 预定义变量
+
+### title
+
+- 类型: `string`
+- 默认值: `h1_title || siteConfig.title`
+
+当前页面的标题。
+
+### lang
+
+- 类型: `string`
+- 默认值: `en-US`
+
+当前页面的语言。
+
+### description
+
+- 类型: `string`
+- 默认值: `siteConfig.description`
+
+当前页面的描述。
+
+### layout
+
+- 类型: `string`
+- 默认值: `Layout`
+
+设置当前页面的布局组件。
+
+### permalink
+
+- 类型: `string`
+- 默认值: `siteConfig.permalink`
+
+参考: [Permalinks](./permalinks.md).
+
+### metaTitle
+
+- 类型: `string`
+- 默认值: <code>\`${page.title} | ${siteConfig.title}\`</code>
+
+重写默认的 meta title。
+
+### meta
+
+- 类型: `array`
+- 默认值: `undefined`
+
+指定额外的要注入的 meta 标签：
+
+``` yaml
+---
+meta:
+  - name: description
+    content: hello
+  - name: keywords
+    content: super duper SEO
+---
+```
+
+---
+
 ## content
 
 当前的 .md 文件渲染的内容，可以作为一个独特的全局组件 `<Content/>` 来使用.
