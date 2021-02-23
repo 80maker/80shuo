@@ -33,6 +33,10 @@ lang: en-US
 在 VuePress 中，Front matter 是 **可选的**。通过Front matter可以做很多有用的事情, 比如文章标签、分类、封面图等
 :::
 
+## content
+
+当前的 .md 文件渲染的内容，可以作为一个独特的全局组件 <Content/> 来使用.
+
 ## permalink
 
 - Access: `$page.frontmatter.permalink`
