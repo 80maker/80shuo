@@ -84,6 +84,6 @@ mkdir docs && echo '# Hello VuePress' > docs/README.md
 yarn docs:dev # npm run docs:dev
 ```
 
-VuePress 会在 http://localhost:8080 (opens new window)启动一个热重载的开发服务器。
+VuePress 会在  [http://localhost:8080](http://localhost:8080)启动一个热重载的开发服务器。
 
 :tada: :100: 到此, 我们已经有了一个完整的可运行的VuePress应用,并且包含了一个最简单的主题。剩下的只需要不断的添加和扩展我们的主题功能。
