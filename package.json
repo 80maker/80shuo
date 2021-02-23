@@ -11,8 +11,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "axios": "^0.21.1",
     "vuepress": "^1.8.0",
-    "vuepress-theme-maker": "^0.2.1",
-    "axios": "^0.21.1"
+    "vuepress-theme-maker": "/Users/mingangchen/Documents/spare_time/vuepress-theme-maker"
   }
 }

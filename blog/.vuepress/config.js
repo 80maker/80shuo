@@ -156,6 +156,12 @@ module.exports = {
     }
   },
   plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-79204848-2' // UA-00000000-0
+      }
+    ],
     require('./plugin/util'),
     [require('./plugin/gallery'), {
       id: 'theme',
