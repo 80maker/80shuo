@@ -11,6 +11,10 @@ links:
     logo: https://www.17ria.com/themes/fruit/assets/images/safari-pinned-tab.svg
     url: https://www.17ria.com/
     desc: 承载最初的简单梦想，记录前端路上的点点滴滴~
+  - title: 青春永不落幕
+    logo: https://qcyblm.gitee.io/favicon.ico
+    url: https://qcyblm.gitee.io/
+    desc: 一位网页设计和收集Windows平台软件的爱好者。
 ---
 
 ### 友链申请
