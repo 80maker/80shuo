@@ -87,10 +87,12 @@ module.exports = {
         {
           id: 'post',
           dirname: '_post',
-          path: '/post/',
+          path: '/',
           itemPermalink: '/post/:year/:month/:day/:slug.html',
           pagination: {
             perPagePosts: 10,
+            prevText: '',
+            nextText: ''
           },
         }
       ],
