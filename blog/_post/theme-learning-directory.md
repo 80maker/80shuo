@@ -79,9 +79,11 @@ module.exports = (themeConfig, ctx) => {
 所有的页面将会默认使用 `Layout.vue` 作为布局组件，对于那些匹配不到的路由将会使用 404.vue
 如果你想要在某一个页面中使用 `AnotherLayout.vue` 作为布局组件，那么你只需要在layouts目录下创建对应组件, 并在具体的页面中 `frontmatter` 显示的设置布局组件名称即可。
 
+``` md
 ---
 layout: AnotherLayout
 ---
+```
 
 ### 样式
 
