@@ -33,7 +33,7 @@ module.exports = {
     hostname: 'https://80shuo.com',
     nav: [
       { text: '🏠 Home', link: '/' },
-      { text: '📖 Theme', link: '/categories/theme/' },
+      { text: '📖 Theme', link: '/post/2020/12/26/theme-learning-0.html' },
       { text: '🐉 Maker Docs', link: '/_post/maker.md' },
       { text: '🖼 Theme Gallery', link: '/vuepress-theme/' },
       { text: '🔥 Animation', link: '/categories/animation/' },
