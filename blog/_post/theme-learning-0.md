@@ -37,7 +37,7 @@ tags:
 * :bear: [**常用术语**](/post/2021/01/01/theme-learning-concept.html)
 * :rabbit: [**主题介绍**](/post/2021/02/23/theme-learning-guide.html)
 * :sheep: [**主题目录结构**](/post/2021/02/24/theme-learning-directory.html)
-* :elephant: **模板文件和布局**
+* :elephant: [**模板文件和布局**](/post/2021/02/25/theme-learning-template.html)
 * :hamster: **Header模板**
 * :eagle: **内置搜索**
 * :frog: **NavBar导航模板**
