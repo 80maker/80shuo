@@ -38,7 +38,6 @@ tags:
 * :rabbit: [**主题介绍**](/post/2021/02/23/theme-learning-guide.html)
 * :sheep: [**主题目录结构**](/post/2021/02/24/theme-learning-directory.html)
 * :elephant: **模板文件和布局**
-* :koala: **主题继承和插件**
 * :hamster: **Header模板**
 * :eagle: **内置搜索**
 * :frog: **NavBar导航模板**
@@ -49,6 +48,7 @@ tags:
 * :unicorn: **Post文章详情页**
 * :turtle: **Toc文章目录组件**
 * :snail: **FriendLink友情链接页**
+* :koala: **主题继承和插件**
 * :octopus: **主题插件开发--悬浮球菜单**
 * :tropical_fish: **响应式主题**
 * :bat: **主题暗黑模式**

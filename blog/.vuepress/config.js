@@ -89,6 +89,7 @@ module.exports = {
           dirname: '_post',
           path: '/',
           itemPermalink: '/post/:year/:month/:day/:slug.html',
+          frontmatter: { title: 'Home' },
           pagination: {
             perPagePosts: 10,
             prevText: '',
