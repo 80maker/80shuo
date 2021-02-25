@@ -16,6 +16,7 @@ links:
     url: https://qcyblm.gitee.io/
     desc: 一位网页设计和收集Windows平台软件的爱好者。
   - title: 小冰博客
+    roundness: true
     logo: https://zfe.space/images/headimage.png
     url: https://zfe.one
     desc: 做个有梦想的人！
