@@ -7,7 +7,7 @@ module.exports = {
   port: 8080,
   theme: 'vuepress-theme-maker',
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/logo.jpg' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#607d8b' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
