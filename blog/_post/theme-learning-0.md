@@ -38,8 +38,7 @@ tags:
 * :rabbit: [**主题介绍**](/post/2021/02/23/theme-learning-guide.html)
 * :sheep: [**主题目录结构**](/post/2021/02/24/theme-learning-directory.html)
 * :elephant: [**模板文件和布局**](/post/2021/02/25/theme-learning-template.html)
-* :hamster: **Header模板**
-* :eagle: **内置搜索**
+* :hamster: [**Home模板**](/post/2021/02/26/theme-learning-home.html)
 * :frog: **NavBar导航模板**
 * :whale: **SideBar模板**
 * :shark: **Archive文章归档页**
@@ -48,6 +47,7 @@ tags:
 * :unicorn: **Post文章详情页**
 * :turtle: **Toc文章目录组件**
 * :snail: **FriendLink友情链接页**
+* :eagle: **内置搜索**
 * :koala: **主题继承和插件**
 * :octopus: **主题插件开发--悬浮球菜单**
 * :tropical_fish: **响应式主题**
