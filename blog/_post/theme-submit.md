@@ -15,9 +15,11 @@ tags:
 name: vuepress-theme-maker // 主题包名称
 cover: https://80shuo.com/images/screenshot.webp // 截图
 author: 80maker // 可选 默认从npm包信息获取
-email: cmgddd@126.com // 用于头像图片生成
+avatar: 头像图片地址
+email: cmgddd@126.com // 可选 用于gravtar头像图片生成
 site: https://80shuo.com // 主题预览地址
-theme-tag:
+repo: //可选 仓库地址
+theme-tags:
   - dark
   - blog
 ---
