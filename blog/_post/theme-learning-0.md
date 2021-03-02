@@ -39,12 +39,12 @@ tags:
 * :sheep: [**主题目录结构**](/post/2021/02/24/theme-learning-directory.html)
 * :elephant: [**模板文件和布局**](/post/2021/02/25/theme-learning-template.html)
 * :hamster: [**Home模板**](/post/2021/02/26/theme-learning-home.html)
+* :unicorn: [**Post文章详情页**](/post/2021/03/02/theme-learning-post.html)
 * :frog: **NavBar导航模板**
 * :whale: **SideBar模板**
 * :shark: **Archive文章归档页**
 * :cow2: **Category分类页**
 * :dragon_face: **Tag标签页**
-* :unicorn: **Post文章详情页**
 * :turtle: **Toc文章目录组件**
 * :snail: **FriendLink友情链接页**
 * :eagle: **内置搜索**
