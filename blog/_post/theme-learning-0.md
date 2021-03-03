@@ -40,7 +40,7 @@ tags:
 * :elephant: [**模板文件和布局**](/post/2021/02/25/theme-learning-template.html)
 * :hamster: [**Home模板**](/post/2021/02/26/theme-learning-home.html)
 * :unicorn: [**Post文章详情页**](/post/2021/03/02/theme-learning-post.html)
-* :frog: **NavBar导航模板**
+* :frog: [**NavBar导航模板**](/post/2021/03/03/theme-learning-nav.html)
 * :whale: **SideBar模板**
 * :shark: **Archive文章归档页**
 * :cow2: **Category分类页**
