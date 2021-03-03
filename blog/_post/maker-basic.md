@@ -264,6 +264,23 @@ module.exports = {
 更多细节，请参见 [MDN docs about the Web App Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 :::
 
+## Copy
+
+对应 `vuepress-plugin-one-click-copy` 插件的options
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    copy: {
+      copySelector: ['div[class*="language-"] pre'], // String or Array
+      copyMessage: '代码复制成功', // default is 'Copy successfully and then paste it for use.'
+      duration: 1000, // prompt message display time.
+      showInMobile: false // whether to display on the mobile side, default: false.
+    }
+}
+```
+
 
 ## See also
 
