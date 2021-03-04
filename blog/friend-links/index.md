@@ -23,3 +23,14 @@ links:
 ---
 
 ### 友链申请
+
+有朋自远方来,来到这里就留个言吧~格式参考如下~
+
+``` yaml
+---
+- title: 1980's Maker
+  logo: https://80shuo.com/logo.jpg
+  url: https://80shuo.com/
+  desc: 一个出生于80年代的新手艺人
+---
+```

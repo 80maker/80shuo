@@ -139,6 +139,54 @@ module.exports = {
 }
 ```
 
+## Palette
+
+访客主题配色自定义
+
+``` js
+// .vuepress/config.js
+module.exports = {
+  themeConfig: {
+    palette: {
+      colors: [{
+        btnColor: '#673ab7',
+        paletteVars: {
+          dark: `--theme-accent-color: #673ab7;
+          --theme-foreground-color: #d8d8d8;
+          --theme-border-color: #444;
+          --theme-background: #202020;
+          --theme-sidebar-background: #673ab7;
+          --theme-card-background: #252525;
+          --theme-card-color: #252525;
+          --theme-bg-tertiary-color: #161b22;
+          --theme-accent-color-005: rgba(103,58,183,0.05);
+          --theme-accent-color-01: rgba(103,58,183,0.1);
+          --theme-accent-color-02: rgba(103,58,183,0.2);
+          --theme-accent-color-04: rgba(103,58,183,0.4);
+          --theme-accent-color-08: rgba(103,58,183,0.8);`,
+          light: `--theme-accent-color: #673ab7;
+          --theme-foreground-color: #363636;
+          --theme-border-color: #e0e0e0;
+          --theme-sidebar-background: #673ab7 linear-gradient(to bottom, #673ab7 0%, #522e92 100%);
+          --theme-card-background: #fff;
+          --theme-bg-tertiary-color: #f6f8fa;
+          --theme-accent-color-005: rgba(103,58,183,0.05);
+          --theme-accent-color-01: rgba(103,58,183,0.1);
+          --theme-accent-color-02: rgba(103,58,183,0.2);
+          --theme-accent-color-04: rgba(103,58,183,0.4);
+          --theme-accent-color-08: rgba(103,58,183,0.8);`
+        }
+      },{
+        btnColor: '#3f51b5',
+        paletteVars: {
+          dark: `--theme-accent-color: #3f51b5; --theme-sidebar-background: #3f51b5;`,
+          light: `--theme-accent-color: #3f51b5; --theme-sidebar-background: #3f51b5;`
+        }
+      }]
+    }
+}
+```
+
 ## Blog
 
 对应 `@vuepress/blog` 插件的options
@@ -273,7 +321,7 @@ module.exports = {
 module.exports = {
   themeConfig: {
     copy: {
-      copySelector: ['div[class*="language-"] pre'], // String or Array
+      copySelector: ['div[class*="language-"] pre', '.friend-link__content div[class*="language-"] pre'], // String or Array
       copyMessage: '代码复制成功', // default is 'Copy successfully and then paste it for use.'
       duration: 1000, // prompt message display time.
       showInMobile: false // whether to display on the mobile side, default: false.
