@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         type: 'github',
-        link: '80maker/vuepress-theme-maker'
+        link: '80maker'
       },
       {
         type: 'qq',
@@ -89,7 +89,7 @@ module.exports = {
           dirname: '_post',
           path: '/',
           itemPermalink: '/post/:year/:month/:day/:slug.html',
-          frontmatter: { title: 'Home' },
+          frontmatter: { title: '' },
           pagination: {
             perPagePosts: 10,
             prevText: '',
