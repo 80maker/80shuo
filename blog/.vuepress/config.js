@@ -127,12 +127,12 @@ module.exports = {
         canonical_base: 'http://80shuo.com',
       },
       comment: {
-        service: 'vssue',
-        platform: 'github',
-        owner: '80maker',
-        repo: '80shuo',
-        clientId: '03ea86acc19571417df6',
-        clientSecret: '40030508c720d7854c6926df2007dd2291f66136',
+        service: 'valine',
+        appId: '1oeLbJt8p8rzkCaguAkbm0sp-gzGzoHsz',
+        appKey: 'jotwOTiL9EkOSYmsp21OcdaM',
+        placeholder: 'Leave a comment',
+        visitor: true,
+        enableQQ: true
       }
     },
     seo: {

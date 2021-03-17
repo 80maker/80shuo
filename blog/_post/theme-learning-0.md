@@ -42,7 +42,7 @@ tags:
 * :unicorn: [**Post文章详情页**](/post/2021/03/02/theme-learning-post.html)
 * :frog: [**NavBar导航模板**](/post/2021/03/03/theme-learning-nav.html)
 * :whale: [**SideBar模板(一)--SubNav**](/post/2021/03/11/theme-learning-subnav.html)
-* :whale: **SideBar模板(二)--FooterBar**
+* :whale: [**SideBar模板(二)--FooterBar**](/post/2021/03/17/theme-learning-footerbar.html)
 * :shark: **Archive文章归档页**
 * :cow2: **Category分类页**
 * :dragon_face: **Tag标签页**
