@@ -50,7 +50,24 @@ module.exports = {
       { text: '🏠 Home', link: '/' },
       { text: '📖 Theme', link: '/categories/theme/' },
       { text: '🐉 Maker', link: '/_post/maker.md' },
-      { text: '🔥 Animation', link: '/categories/animation/' },
+      // 多级菜单
+      { text: '🔥 Animation', items: [{
+        text: '2d动画',
+        items: [
+          {
+            text: 'css3',
+            link: '/categories/animation-css/'
+          }
+        ]
+      },{
+        text: '3d动画',
+        items: [
+          {
+            text: 'webgl',
+            link: '/categories/animation-webgl/'
+          }
+        ]
+      }]},
       { text: '📽 Old Time', link: '/categories/oldtime/' },
       { text: '🔗 friend-links', link: '/friend-links/' },
       // 外部链接
