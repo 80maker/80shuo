@@ -45,7 +45,7 @@ tags:
 * :whale: [**SideBar模板(二)--FooterBar**](/post/2021/03/17/theme-learning-footerbar.html)
 * :shark: [**Archive文章归档页**](/post/2021/03/30/theme-learning-archive.html)
 * :cow2: [**Category分类页**](/post/2021/03/31/theme-learning-category.html)
-* :dragon_face: **Tag标签页**
+* :dragon_face: [**Tag标签页**](/post/2021/04/06/theme-learning-tag.html)
 * :turtle: **Toc文章目录组件**
 * :snail: **FriendLink友情链接页**
 * :eagle: **内置搜索**
