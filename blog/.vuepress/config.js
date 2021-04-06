@@ -104,7 +104,9 @@ module.exports = {
           path: '/tags/',
           frontmatter: { title: 'Tag' },
           pagination: {
-            lengthPerPage: 10
+            lengthPerPage: 10,
+            prevText: '',
+            nextText: ''
           }
         },
         {
