@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>1980&apos;s Maker</title>
+        <link>http://80shuo.com</link>
+        <description>一个出生于80年代的程序员 -- 喜爱创[客]、美[食]、动[画]、怀[旧]的新手艺人的博客</description>
+        <lastBuildDate>Sun, 18 Sep 2022 05:12:10 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <atom:link href="http://80shuo.com/feed.atom" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Maker主题配置--页面配置]]></title>
+            <link>http://80shuo.com/post/2021/01/25/maker-page.html</link>
+            <guid>http://80shuo.com/post/2021/01/25/maker-page.html</guid>
+            <pubDate>Mon, 25 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Maker主题的限制, title设置后会自动解析为h1标签]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Maker主题配置--Icon图标]]></title>
+            <link>http://80shuo.com/post/2021/01/22/maker-icon.html</link>
+            <guid>http://80shuo.com/post/2021/01/22/maker-icon.html</guid>
+            <pubDate>Fri, 22 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[}
+.article-content table td{
+  text-align: center;
+}
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Maker主题配置--基本配置]]></title>
+            <link>http://80shuo.com/post/2021/01/23/maker-basic.html</link>
+            <guid>http://80shuo.com/post/2021/01/23/maker-basic.html</guid>
+            <pubDate>Sat, 23 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖基乎所有和主题相关配置项,帮助你快速开始搭建和配置Maker主题.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[浏览器端不用第三方包也可以获取md5值]]></title>
+            <link>http://80shuo.com/post/2020/11/26/md5.html</link>
+            <guid>http://80shuo.com/post/2020/11/26/md5.html</guid>
+            <pubDate>Thu, 26 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+利益于JS的同构特性,crypto虽然是Node.js的自带模块,但同时也能用于Web浏览器端。
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Theme Maker]]></title>
+            <link>http://80shuo.com/post/2020/12/23/maker.html</link>
+            <guid>http://80shuo.com/post/2020/12/23/maker.html</guid>
+            <pubDate>Wed, 23 Dec 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[从零开始制作VuePress主题]]></title>
+            <link>http://80shuo.com/post/2020/12/26/theme-learning-0.html</link>
+            <guid>http://80shuo.com/post/2020/12/26/theme-learning-0.html</guid>
+            <pubDate>Sat, 26 Dec 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[你现在看到的博客站点就是基于的这个主题。用的github pages部署,这是github提供的一项免费服务，我们可以在上边放些静态HTML页面组成一个站点。VuePress就是方便我们维护和生成这个静态站点的工具,类似的还有Hugo、hexo、jekyll等等 闻如其名,VuePress是由Vue.js驱动的,而且出自Vue官方团队之手。它的诞生初衷便是为了支持 Vue 及其子项目的文档需求，拥有完善的Markdown支持,并自带了一个专门为技术文档而优化的默认主题.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[【常用Shell命令】- tree]]></title>
+            <link>http://80shuo.com/post/2021/01/22/shell-tree.html</link>
+            <guid>http://80shuo.com/post/2021/01/22/shell-tree.html</guid>
+            <pubDate>Fri, 22 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[浏览博客文章时经常会看到一些很漂亮的目录结构,就像下面所示
+assets
+├── fonts
+│   ├── google
+│   │   ├── bbr.woff2
+│   │   └── sarpanch.woff2
+│   └── icomoon
+│       └── Icon.woff
+└── images
+    └── bg.png
+
+123456789]]></description>
+        </item>
+        <item>
+            <title><![CDATA[VuePress主题教程 -- Category分类页]]></title>
+            <link>http://80shuo.com/post/2021/03/31/theme-learning-category.html</link>
+            <guid>http://80shuo.com/post/2021/03/31/theme-learning-category.html</guid>
+            <pubDate>Wed, 31 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+分类页和上一篇的归档页一样,都是方便检索文章博客的必备功能页,与之类似,我们同样是借助vuepress的extendPageData插件api动态注入页面类型,同时配合blog插件君的文档分类功能共同完成分类页。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/category.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress主题教程 -- Archive文章归档页]]></title>
+            <link>http://80shuo.com/post/2021/03/30/theme-learning-archive.html</link>
+            <guid>http://80shuo.com/post/2021/03/30/theme-learning-archive.html</guid>
+            <pubDate>Tue, 30 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+本篇我们来实现文章归档页,关键点还是涉及全局计算属性的运用,同时借助了相关插件api来动态生成归档页并注入页面类型。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/archive.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress中的常用术语]]></title>
+            <link>http://80shuo.com/post/2021/01/01/theme-learning-concept.html</link>
+            <guid>http://80shuo.com/post/2021/01/01/theme-learning-concept.html</guid>
+            <pubDate>Fri, 01 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+你可能会在你可能会在文档中碰到一些陌生的概念，本节列出了文档中常见的术语，方便查阅、学习、插件/主题开发之用。
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[VuePress 主题目录结构]]></title>
+            <link>http://80shuo.com/post/2021/02/24/theme-learning-directory.html</link>
+            <guid>http://80shuo.com/post/2021/02/24/theme-learning-directory.html</guid>
+            <pubDate>Wed, 24 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+接上一篇,我们已经有了个能运行的简易站点,主题目录下仅包含了一个Layout.vue文件,从现在开始我们需要往里面添置东西让主题变得功能完备起来,以下是推荐的目录结构。
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[VuePress 主题介绍]]></title>
+            <link>http://80shuo.com/post/2021/02/23/theme-learning-guide.html</link>
+            <guid>http://80shuo.com/post/2021/02/23/theme-learning-guide.html</guid>
+            <pubDate>Tue, 23 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[`]]></description>
+        </item>
+        <item>
+            <title><![CDATA[VuePress 主题教程 -- NavBar 模板文件编写]]></title>
+            <link>http://80shuo.com/post/2021/03/03/theme-learning-nav.html</link>
+            <guid>http://80shuo.com/post/2021/03/03/theme-learning-nav.html</guid>
+            <pubDate>Wed, 03 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+导航模块是博客站点必备的一个元素,我们将参考VuePress默认主题来实现导航模块。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/navbar.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Home 模板文件编写]]></title>
+            <link>http://80shuo.com/post/2021/02/26/theme-learning-home.html</link>
+            <guid>http://80shuo.com/post/2021/02/26/theme-learning-home.html</guid>
+            <pubDate>Fri, 26 Feb 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+从本篇开始我们将引入官方的 vuepress-plugin-blog 插件, blog插件封装了一系列实用功能, 用它来做博客的自定义主题可以省心不少。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/home.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress主题教程 -- FooterBar模板编写]]></title>
+            <link>http://80shuo.com/post/2021/03/17/theme-learning-footerbar.html</link>
+            <guid>http://80shuo.com/post/2021/03/17/theme-learning-footerbar.html</guid>
+            <pubDate>Wed, 17 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+接上一篇,我们完成剩下的用来放一些社交媒体链接及版权信息的FooterBar模板。本篇内容会比较简单,主要会利用vue的条件渲染对常用的链接类型进行区别适配,编写一个图标组件用来媒体图标的显示。版权信息之类的是用v-html指令接收,可以自己自定义任意的HTML。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/footerbar.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Post 模板文件编写]]></title>
+            <link>http://80shuo.com/post/2021/03/02/theme-learning-post.html</link>
+            <guid>http://80shuo.com/post/2021/03/02/theme-learning-post.html</guid>
+            <pubDate>Tue, 02 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+上篇我们已经完成了文章列表页,但还看不到文章内容,本篇我们就来编写文章详情页来展示文章的内容及文章对应的一些元数据。eg.作者、发布日期、分类、标签等。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/post.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress主题教程 --SubNav模板编写]]></title>
+            <link>http://80shuo.com/post/2021/03/11/theme-learning-subnav.html</link>
+            <guid>http://80shuo.com/post/2021/03/11/theme-learning-subnav.html</guid>
+            <pubDate>Thu, 11 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+SideBar是一个复合模板, FooterBar,NavBar, SubNav均包含在里面, 我们已经完成了NavBar, 剩下的SubNav是对站点的分类、标签及文章的简易统计和快速入口,FooterBar是用来放一些社交媒体链接及版权信息。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/subnav.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress主题教程 -- Tag标签页]]></title>
+            <link>http://80shuo.com/post/2021/04/06/theme-learning-tag.html</link>
+            <guid>http://80shuo.com/post/2021/04/06/theme-learning-tag.html</guid>
+            <pubDate>Tue, 06 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[
+Tag标签页和分类页非常相似,也是标签汇总页加上具体标签的文章列表页组合而成,同样是借助vuepress的extendPageData插件api动态注入页面类型和blog插件君打的一套组合拳。
+]]></description>
+            <enclosure url="http://80shuo.com/images/learning/tag.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Maker Theme Markdown 语法示例]]></title>
+            <link>http://80shuo.com/post/2021/01/12/theme-showcase.html</link>
+            <guid>http://80shuo.com/post/2021/01/12/theme-showcase.html</guid>
+            <pubDate>Tue, 12 Jan 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[涵盖基乎所有和主题相关的Markdown语法示例,帮助写作过程中快速查阅.]]></description>
+            <enclosure url="https://vuepress.vuejs.org/architecture.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[VuePress 主题提交说明]]></title>
+            <link>http://80shuo.com/post/2021/02/06/theme-submit.html</link>
+            <guid>http://80shuo.com/post/2021/02/06/theme-submit.html</guid>
+            <pubDate>Sat, 06 Feb 2021 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
