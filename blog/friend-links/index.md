@@ -2,6 +2,11 @@
 title: It is always a pleasure to greet a friend from afar ~
 cover: /images/friend.jpg
 links: 
+  - title: San' qi
+    roundness: true
+    logo: https://www.qblog.cc/logo.png
+    url: https://www.qblog.cc/
+    desc: 坚持是对平庸最好的打击！
   - title: Ikeq Cheng
     roundness: true
     logo: https://www.gravatar.com/avatar/06818ca4361a28447cffdd2daaed2799?s=160
